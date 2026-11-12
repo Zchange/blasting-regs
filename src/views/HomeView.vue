@@ -42,6 +42,7 @@ function onSearch() {
 
     <p class="notice">
       本工具提供目录、场景和检索导航，<strong>不收录规程正文</strong>。阅读原文请前往国家标准全文公开系统，或在「我的」中导入您合法取得的文本。
+      <RouterLink class="link-out notice-help" :to="{ name: 'help' }">使用说明</RouterLink>
     </p>
 
     <section class="section">
@@ -87,3 +88,10 @@ function onSearch() {
     <p class="disclaimer">{{ catalog.disclaimer }}</p>
   </div>
 </template>
+
+<style scoped>
+.notice-help {
+  margin-left: 8px;
+  white-space: nowrap;
+}
+</style>

@@ -7,6 +7,7 @@ const ScenarioView = () => import('../views/ScenarioView.vue')
 const ShortcutView = () => import('../views/ShortcutView.vue')
 const InfoView = () => import('../views/InfoView.vue')
 const MeView = () => import('../views/MeView.vue')
+const HelpView = () => import('../views/HelpView.vue')
 const PdfView = () => import('../views/PdfView.vue')
 
 const router = createRouter({
@@ -23,6 +24,7 @@ const router = createRouter({
     { path: '/shortcut/:id', name: 'shortcut', component: ShortcutView, meta: { tab: 'home' } },
     { path: '/info', name: 'info', component: InfoView, meta: { tab: 'info' } },
     { path: '/me', name: 'me', component: MeView, meta: { tab: 'me' } },
+    { path: '/help', name: 'help', component: HelpView, meta: { tab: 'me' } },
     { path: '/pdf', name: 'pdf', component: PdfView, meta: { tab: 'me', hideTabbar: true } },
   ],
 })
