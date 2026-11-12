@@ -92,6 +92,16 @@ function formatTime(at: number): string {
     </header>
 
     <section class="section">
+      <RouterLink class="entry-row help-entry" :to="{ name: 'help' }">
+        <div class="body">
+          <div class="title">使用说明</div>
+          <div class="muted" style="margin-top: 4px">按场景进入、浏览目录、检索和阅读官方原文</div>
+        </div>
+        <van-icon name="arrow" color="#5c6774" />
+      </RouterLink>
+    </section>
+
+    <section class="section">
       <div class="section-title">正文字号</div>
       <div class="font-switch" style="width: max-content">
         <button :class="{ 'is-on': font === 'sm' }" @click="onFont('sm')">较小</button>
@@ -146,3 +156,9 @@ function formatTime(at: number): string {
     <p class="disclaimer">{{ catalog.disclaimer }}</p>
   </div>
 </template>
+
+<style scoped>
+.help-entry {
+  align-items: center;
+}
+</style>
